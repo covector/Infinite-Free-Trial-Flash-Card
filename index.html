@@ -7,9 +7,14 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <link rel="stylesheet" type="text/css" href="styles/main.css" />
     <link rel="shortcut icon" href="images/icon.ico">
+    <script src="js/import.js"></script>
     <title>Flash Card</title>
 </head>
 <body>
+    <div class="exportDiv" onclick="toggleExport(false)">
+        <input id="cookieExport" readonly></input>
+        <button onclick="exportCookie()">Copy Cookies</button>
+    </div>
     <div class="topBar">
         <a href="quiz.html"><div class="topQuiz">Start Quiz</div></a>
         <a href="index.html"><div class="topTitle">
@@ -29,7 +34,7 @@
             <p>Edit Cards</p>
         </div>
         <div class="export">
-            <img src="images/exportButton.png" />
+            <img onclick="toggleExport(true)" src="images/exportButton.png" />
             <p>Export Cards</p>
         </div>
     </div>
@@ -37,13 +42,13 @@
     <div class="import">
         <h1>Import</h1>
         <div>
-            <input></input>
-            <div class="importButton">Import and Append</div>
-            <div class="importNreplaceButton">Import and Replace</div>   
+            <input id="importBar"></input>
+            <div class="append" onclick="importCookie(false)">Import and Append</div>
+            <div class="replace" onclick="importCookie(true)">Import and Replace</div>   
         </div>
     </div>
     <div class="clear">
-        <button>Clear</button>
+        <button onclick="clearCookie()">Clear All Cards</button>
     </div>
 </body>
 </html>

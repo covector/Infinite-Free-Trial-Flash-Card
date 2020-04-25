@@ -72,3 +72,32 @@ div.table div.descriptionCard:active{
     50% {background-color: rgb(255, 117, 117);}
     100% {background-color: rgb(255,255,255)}
 }
+div.congrat{
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(219, 219, 219, 0.801);
+    width: 100vw;
+    height: 100vh;
+    bottom: 0px;
+    line-height: 100vh;
+    text-align: center;
+    font-size: 200px;
+    font-weight: 100;
+    color:rgb(74, 83, 99);
+    display: none;
+    animation-name: congratulation;
+    animation-duration: 1s;
+    animation-play-state: running;
+}
+@keyframes congratulation{
+    from {
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+div.table div.noCards{
+    font-size: 20px;
+    display: none;
+}

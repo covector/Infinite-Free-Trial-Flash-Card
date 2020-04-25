@@ -10,7 +10,12 @@ var lockedCard = [];
 var left = 0;
 
 window.onload = function(){
-    initCard();
+    if (document.cookie != ""){
+        initCard();  
+    }
+    else{
+        document.getElementsByClassName("noCards")[0].style.display = "block";
+    }
 }
 
 initCard = function(){
@@ -98,7 +103,7 @@ toggleCard = function(pair, card){
 
                     left--;
                     if (left == 0){
-                        alert("congrats");
+                        document.getElementsByClassName("congrat")[0].style.display = "block";
                     }
                 }
                 else{
