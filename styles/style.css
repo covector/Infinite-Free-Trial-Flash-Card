@@ -1,0 +1,67 @@
+body{
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin: 0 0 0 0;
+    background-color: rgb(240, 240, 240);
+    padding-top: 200px;
+}
+a{
+    text-decoration: none;
+}
+div.topBar{
+    display: flex;
+    top: 0px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(64, 132, 233);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 0 0 0;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(76, 102, 173);
+    border-bottom-width: 10px;
+    box-shadow: 0 0 8px rgb(105, 105, 105);
+    position: fixed;
+    width: 100%;
+}
+div.topBar div{
+    font-family: inherit;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+div.topBar div.topQuiz{
+    margin-left: 50px;
+    background-color: rgb(36, 111, 209);
+    padding: 10px 30px 10px 30px;
+}
+div.topBar div.topEdit{
+    margin-right: 50px;
+    background-color: rgb(36, 111, 209);
+    padding: 10px 30px 10px 30px;
+}
+div.topBar div.topTitle div.bigWord{
+    font-size: 60px;
+    font-weight: 600;
+}
+div.topBar div.topTitle div.smallWord{
+    font-size: 20px;
+}
+div.topBar div:hover{
+    cursor: pointer;
+}
+div.topBar div.topQuiz:hover{
+    background-color: rgb(41, 97, 170);
+}
+div.topBar div.topEdit:hover{
+    background-color: rgb(41, 97, 170);
+}
+div.topBar div.topQuiz:active{
+    background-color: rgb(62, 112, 179);
+}
+div.topBar div.topEdit:active{
+    background-color: rgb(62, 112, 179);
+}
+h1{
+    font-size: 50px;
+    margin: 0 0 10px 10px;
+}

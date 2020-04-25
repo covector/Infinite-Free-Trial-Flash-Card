@@ -1,0 +1,74 @@
+div.table{
+    padding: 20px 10px 30px 20px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-row-gap: 40px;
+    background-color: rgb(221, 221, 221);
+    border-top-style: solid;
+    border-top-width: 10px;
+    border-top-color: rgb(194, 194, 194);
+    border-bottom-style: solid;
+    border-bottom-width: 10px;
+    border-bottom-color: rgb(194, 194, 194);
+}
+div.table div.descriptionCard{
+    width: 180px;
+    height: 180px;
+    background-color: white;
+    border-radius: 5%;
+    box-shadow: 10px 10px rgb(185, 185, 185);
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    animation-name: greenBlink;
+    animation-duration: 1s;
+    animation-play-state: paused;
+}
+div.table div.descriptionCard div{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+div.table div.wordCard{
+    display: flex;
+    width: 180px;
+    height: 180px;
+    line-height: 180px;
+    background-color: white;
+    border-radius: 5%;
+    box-shadow: 10px 10px rgb(185, 185, 185);
+    align-items: center;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    animation-name: greenBlink;
+    animation-duration: 1s;
+    animation-play-state: paused;
+}
+div.table div.wordCard div{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    font-weight: 600;
+}
+div.table div.wordCard:hover{
+    cursor: pointer;
+    background-color: rgb(236, 236, 236);
+}
+div.table div.wordCard:active{
+    background-color: rgb(218, 218, 218);
+}
+div.table div.descriptionCard:hover{
+    cursor: pointer;
+    background-color: rgb(236, 236, 236);
+}
+div.table div.descriptionCard:active{
+    background-color: rgb(218, 218, 218);
+}
+@keyframes greenBlink{
+    from {background-color: rgb(255,255,255)}
+    to {background-color: rgb(180, 255, 180);}
+}
+@keyframes redBlink{
+    0% {background-color: rgb(255,255,255)}
+    50% {background-color: rgb(255, 117, 117);}
+    100% {background-color: rgb(255,255,255)}
+}
