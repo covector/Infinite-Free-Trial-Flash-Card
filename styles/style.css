@@ -31,15 +31,15 @@ div.topBar div{
     font-size: 30px;
     color: white;
 }
-div.topBar div.topQuiz{
-    margin-left: 50px;
+div.topBar div.buttons{
     background-color: rgb(36, 111, 209);
     padding: 10px 30px 10px 30px;
 }
-div.topBar div.topEdit{
+div.topBar div.home{
+    margin-left: 50px;
+}
+div.topBar div.topQuiz{
     margin-right: 50px;
-    background-color: rgb(36, 111, 209);
-    padding: 10px 30px 10px 30px;
 }
 div.topBar div.topTitle div.bigWord{
     font-size: 60px;
@@ -51,19 +51,85 @@ div.topBar div.topTitle div.smallWord{
 div.topBar div:hover{
     cursor: pointer;
 }
-div.topBar div.topQuiz:hover{
+div.topBar div.buttons:hover{
     background-color: rgb(41, 97, 170);
 }
-div.topBar div.topEdit:hover{
-    background-color: rgb(41, 97, 170);
-}
-div.topBar div.topQuiz:active{
+div.topBar div.buttons:active{
     background-color: rgb(62, 112, 179);
 }
-div.topBar div.topEdit:active{
-    background-color: rgb(62, 112, 179);
-}
+
 h1{
     font-size: 50px;
     margin: 0 0 10px 10px;
+}
+@media screen and (max-width: 1400px){
+    div.topBar div{
+        font-size: 20px;
+    }
+    div.topBar div.topTitle div.bigWord{
+        font-size: 50px;
+        font-weight: 600;
+    }
+    div.topBar div.topTitle div.smallWord{
+        font-size: 19px;
+    }
+}
+@media screen and (max-width: 1100px){
+    body{
+        padding-top: 180px;
+    }
+    div.topBar div{
+        font-size: 15px;
+    }
+    div.topBar div.topTitle div.bigWord{
+        font-size: 40px;
+        font-weight: 600;
+    }
+    div.topBar div.topTitle div.smallWord{
+        font-size: 18px;
+    }
+    div.topBar div.buttons{
+        padding: 10px 20px 10px 20px;
+    }
+}
+@media screen and (max-width: 900px){
+    body{
+        padding-top: 150px;
+    }
+    div.topBar div{
+        font-size: 12px;
+    }
+    div.topBar div.topTitle div.bigWord{
+        font-size: 35px;
+        font-weight: 600;
+    }
+    div.topBar div.topTitle div.smallWord{
+        font-size: 15px;
+    }
+    div.topBar div.buttons{
+        padding: 10px 10px 10px 10px;
+    }
+}
+@media screen and (max-width: 700px){
+    body{
+        padding-top: 140px;
+    }
+    div.topBar div{
+        font-size: 10px;
+    }
+    div.topBar div.topTitle div.bigWord{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    div.topBar div.topTitle div.smallWord{
+        font-size: 10px;
+    }
+    div.topBar div.buttons{
+        padding: 10px 10px 10px 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    h1{
+        font-size: 30px;
+    }
 }

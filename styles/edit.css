@@ -80,3 +80,63 @@ div.list div.cardAdding textarea{
     border-color: rgb(185, 185, 185);
     background-color: rgb(214, 214, 214);
 }
+@media screen and (max-width: 900px){
+    div.list{
+        font-size: 15px;
+    }
+    div.list div .word{
+        margin-left: 15px;
+        width: 130px;
+    }
+    div.list div .description{
+        width: 250px;
+    }
+    div.list div div.plus{
+        margin-right: 15px;
+        font-size: 20px;
+        width: 40px;
+    }
+    div.list div div.minus{
+        margin-right: 15px;
+        font-size: 20px;
+        width: 40px;
+    }
+    div.list div.cardAdding input{
+        height: 30px;
+        font-size: 15px;
+    }
+    div.list div.cardAdding textarea{
+        font-size: 15px;
+        height: 80px;
+    }
+}
+@media screen and (max-width: 600px){
+    div.list{
+        font-size: 10px;
+    }
+    div.list div .word{
+        margin-left: 15px;
+        width: 80px;
+    }
+    div.list div .description{
+        width: 150px;
+    }
+    div.list div div.plus{
+        margin-right: 15px;
+        font-size: 15px;
+        width: 35px;
+    }
+    div.list div div.minus{
+        margin-right: 15px;
+        font-size: 15px;
+        width: 35px;
+    }
+    div.list div.cardAdding input{
+        height: 20px;
+        font-size: 10px;
+    }
+    div.list div.cardAdding textarea{
+        font-size: 10px;
+        height: 60px;
+    }
+}
