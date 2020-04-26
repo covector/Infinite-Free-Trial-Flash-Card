@@ -3,9 +3,12 @@ window.onload = function() {
 }
 
 removeWord = function(id){
-    let word = document.getElementById(id);
-    removeCookie(id);
-    word.remove();
+    let decision = confirm("Are you sure you want to remove this card?");
+    if (decision){
+        let word = document.getElementById(id);
+        removeCookie(id);
+        word.remove(); 
+    }
 }
 
 addWord = function(){

@@ -3,10 +3,10 @@ div.table{
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-row-gap: 40px;
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(218, 218, 218);
     border-top-style: solid;
     border-top-width: 10px;
-    border-top-color: rgb(194, 194, 194);
+    border-top-color: rgb(228, 228, 228);
     border-bottom-style: solid;
     border-bottom-width: 10px;
     border-bottom-color: rgb(194, 194, 194);

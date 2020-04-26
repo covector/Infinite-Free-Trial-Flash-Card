@@ -29,7 +29,7 @@ div.flexBox p{
     margin-top: 0px;
 }
 div.import{
-    background-color: rgb(219, 219, 219);
+    background-color: rgb(209, 218, 226);
     text-align: center;
     padding-top: 50px;
     padding-bottom: 60px;
@@ -94,6 +94,7 @@ div.clear button{
     margin-bottom: 50px;
     border-style: none;
     font-family: inherit;
+    
 }
 div.clear button:hover{
     cursor: pointer;

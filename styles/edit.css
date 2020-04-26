@@ -13,15 +13,17 @@ div.headRow{
     font-weight: 700;
 }
 div.cardAdded{
+    color: rgb(60, 80, 109);
     display: flex;
     justify-content: space-between;
-    background-color: rgb(226, 226, 226);
+    background-color: rgb(207, 217, 228);
     align-items: center;
 }
 div.cardAdding{
+    color: rgb(60, 80, 109);
     display: flex;
     justify-content: space-between;
-    background-color: rgb(206, 206, 206);
+    background-color: rgb(186, 205, 223);
     align-items: center;
 }
 div.list div .word{
@@ -34,17 +36,19 @@ div.list div .description{
     overflow: auto;
 }
 div.list div div.plus{
+    color: rgb(79, 120, 139);
     margin-right: 20px;
     font-size: 30px;
-    background-color: rgb(223, 223, 223);
+    background-color: rgb(193, 226, 236);
     text-align: center;
     width: 55px;
     border-radius: 50%;
 }
 div.list div div.minus{
+    color: rgb(155, 63, 63);
     margin-right: 20px;
     font-size: 30px;
-    background-color: rgb(211, 211, 211);
+    background-color: rgb(240, 191, 191);
     text-align: center;
     width: 55px;
     border-radius: 50%;
@@ -53,23 +57,25 @@ div.list div div.example{
     width: 55px;
 }
 div.list div.cardAdding input{
+    color: inherit;
     height: 40px;
     font-family: inherit;
     font-size: 20px;
     border-radius: 3px;
     border-style: solid;
-    border-color: rgb(185, 185, 185);
-    background-color: rgb(214, 214, 214);
+    border-color: rgb(153, 172, 190);
+    background-color: rgb(189, 201, 223);
 }
 div.list div div.minus:hover{
     cursor: pointer;
-    background-color: rgb(199, 199, 199);
+    background-color: rgb(221, 167, 167);
 }
 div.list div div.plus:hover{
     cursor: pointer;
-    background-color: rgb(196, 196, 196);
+    background-color: rgb(173, 205, 214);
 }
 div.list div.cardAdding textarea{
+    color: inherit;
     resize: none;
     font-family: inherit;
     font-size: 20px;
@@ -77,8 +83,8 @@ div.list div.cardAdding textarea{
     border-radius: 3px;
     border-style: solid;
     border-width: 2px;
-    border-color: rgb(185, 185, 185);
-    background-color: rgb(214, 214, 214);
+    border-color: rgb(153, 172, 190);
+    background-color: rgb(189, 201, 223);
 }
 @media screen and (max-width: 900px){
     div.list{
