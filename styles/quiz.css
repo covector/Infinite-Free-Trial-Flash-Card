@@ -164,4 +164,7 @@ div.table div.noCards{
         line-height: 50px;
         font-size:8px;
     }
+    div.congrat{
+        font-size: 70px;
+    }
 }
