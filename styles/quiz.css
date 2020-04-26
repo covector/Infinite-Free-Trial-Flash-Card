@@ -117,6 +117,51 @@ div.table div.noCards{
         grid-template-columns: repeat(7, auto);
     }
 }
+@media screen and (min-width: 1900px){
+    div.table{
+        grid-template-columns: repeat(8, auto);
+    }
+}
+@media screen and (min-width: 2200px){
+    div.table{
+        grid-template-columns: repeat(9, auto);
+    }
+}
+@media screen and (min-width: 2400px){
+    div.table{
+        grid-template-columns: repeat(10, auto);
+    }
+}
+@media screen and (min-width: 2600px){
+    div.table{
+        grid-template-columns: repeat(11, auto);
+    }
+}
+@media screen and (min-width: 2800px){
+    div.table{
+        grid-template-columns: repeat(12, auto);
+    }
+}
+@media screen and (min-width: 3000px){
+    div.table{
+        grid-template-columns: repeat(13, auto);
+    }
+}
+@media screen and (min-width: 3200px){
+    div.table{
+        grid-template-columns: repeat(14, auto);
+    }
+}
+@media screen and (min-width: 3400px){
+    div.table{
+        grid-template-columns: repeat(15, auto);
+    }
+}
+@media screen and (min-width: 3600px){
+    div.table{
+        grid-template-columns: repeat(16, auto);
+    }
+}
 @media screen and (max-width: 1000px){
     div.table div.descriptionCard{
         width: 130px;
