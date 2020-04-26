@@ -1,3 +1,53 @@
 h2{
-    margin: 50px 0 10px 10px;
+    margin: 80px 0 10px 10px;
+    font-size: 40px;
+}
+div.stepO{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    background-color: rgb(195, 210, 226);
+}
+div.stepE{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    background-color: rgb(211, 221, 231);
+}
+div img{
+    width: 800px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgb(102, 125, 151);
+    border-radius: 20px;
+}
+div p{
+    font-size: 20px;
+}
+li{
+    font-size: 20px;
+    margin-top: 20px;
+    color: rgb(95, 147, 206);
+}
+@media screen and (max-width: 1000px){
+    div img{
+        width: 500px;
+        border-width: 5px;
+    }
+}
+@media screen and (max-width: 600px){
+    div img{
+        width: 400px;
+        border-width: 5px;
+    }
+    h2{
+        margin: 60px 0 10px 10px;
+        font-size: 25px;
+    }
+    li{
+        font-size: 15px;
+    }
+    div p{
+        font-size: 15px;
+    }
 }

@@ -24,6 +24,7 @@ importCookie = function(replace){
                 document.cookie = cookieHalf[0]+"="+cookieHalf[1]+"; expires=01 Jan 2120 00:00:00 UTC";
             }
         }  
+        alert("Cards have been imported. You can now start a quiz.")
     }
 }
 

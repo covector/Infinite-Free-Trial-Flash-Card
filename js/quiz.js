@@ -103,7 +103,9 @@ toggleCard = function(pair, card){
 
                     left--;
                     if (left == 0){
-                        document.getElementsByClassName("congrat")[0].style.display = "block";
+                        setTimeout(function(){
+                            document.getElementsByClassName("congrat")[0].style.display = "block";
+                        }, 750);
                     }
                 }
                 else{

@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Montserrat Alternates', sans-serif;
     margin: 0 0 0 0;
