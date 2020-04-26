@@ -10,7 +10,7 @@ importCookie = function(replace){
                 for (let i = 0; i < cookies.length; i++){
                     document.cookie = cookies[i].split("=")[0]+"=Delete; expires=11 Sep 2001 13:46:00 UTC";
                 }
-                let cookieOne = cookiesAdd.split("; ")
+                let cookieOne = cookiesAdd.split(";")
                 for (let i = 0; i < cookieOne.length; i++){
                     let cookieHalf = cookieOne[i].split("=");
                     document.cookie = cookieHalf[0]+"="+cookieHalf[1]+"; expires=01 Jan 2120 00:00:00 UTC";
@@ -18,7 +18,7 @@ importCookie = function(replace){
             }
         }
         else{
-            let cookieOne = cookiesAdd.split("; ")
+            let cookieOne = cookiesAdd.split(";")
             for (let i = 0; i < cookieOne.length; i++){
                 let cookieHalf = cookieOne[i].split("=");
                 document.cookie = cookieHalf[0]+"="+cookieHalf[1]+"; expires=01 Jan 2120 00:00:00 UTC";
@@ -49,7 +49,7 @@ toggleExport = function(eIN){
     let popUp = document.getElementsByClassName("exportDiv")[0].style
     if (!cooldown){
         if (eIN){
-            document.getElementById("cookieExport").value = document.cookie;
+            document.getElementById("cookieExport").value = document.cookie.replace(/; /g, ";");
             popUp.display = "block";
             popUp.animationName = "exportingIN";
             setTimeout(()=>{
