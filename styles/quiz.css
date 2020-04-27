@@ -1,3 +1,30 @@
+div.quizHeader{
+    display: flex;
+    align-items: center;
+}
+div.quizHeader div.correct{
+    font-size: 20px;
+    color: rgb(87, 214, 87);
+    font-weight: 700;
+    padding-left: 60px;
+}
+div.quizHeader div.wrong{
+    font-size: 20px;
+    color: rgb(223, 96, 96);
+    font-weight: 700;
+    text-align: left;
+    padding-left: 30px;
+}
+div.quizHeader div.timer{
+    font-size: 20px;
+    color: rgb(87, 121, 214);
+    font-weight: 700;
+    text-align: left;
+    padding-left: 30px;
+}
+div.quizHeader div span{
+    font-weight: 500;
+}
 div.table{
     padding: 20px 10px 30px 20px;
     display: grid;
@@ -75,7 +102,7 @@ div.table div.descriptionCard:active{
 div.congrat{
     position: fixed;
     z-index: 1;
-    background-color: rgba(219, 219, 219, 0.801);
+    background-color: rgba(219, 219, 219, 0.658);
     width: 100vw;
     height: 100vh;
     bottom: 0px;
@@ -179,6 +206,18 @@ div.table div.noCards{
     }
 }
 @media screen and (max-width: 800px){
+    div.quizHeader div.correct{
+        font-size: 15px;
+        padding-left: 45px;
+    }
+    div.quizHeader div.wrong{
+        font-size: 15px;
+        padding-left: 20px;
+    }
+    div.quizHeader div.timer{
+        font-size: 15px;
+        padding-left: 20px;
+    }
     div.table div.descriptionCard{
         width: 100px;
         height: 100px;
@@ -198,6 +237,18 @@ div.table div.noCards{
     }
 }
 @media screen and (max-width: 600px){
+    div.quizHeader div.correct{
+        font-size: 12px;
+        padding-left: 20px;
+    }
+    div.quizHeader div.wrong{
+        font-size: 12px;
+        padding-left: 12px;
+    }
+    div.quizHeader div.timer{
+        font-size: 12px;
+        padding-left: 12px;
+    }
     div.table div.descriptionCard{
         width: 50px;
         height: 50px;

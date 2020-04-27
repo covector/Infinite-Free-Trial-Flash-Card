@@ -8,6 +8,11 @@ var activeL = "";
 var lockScreen = false;
 var lockedCard = [];
 var left = 0;
+var total = 0;
+var correct = 0;
+var wrong = 0;
+var timerStarted = false;
+var timer;
 
 window.onload = function(){
     if (document.cookie != ""){
@@ -21,6 +26,7 @@ window.onload = function(){
 initCard = function(){
     let cardAmount = loadCookie();
     left = cardAmount;
+    total = cardAmount;
     let picked = [];
     let before = document.getElementById("endOfTable");
     let pickedAmount = 0;
@@ -55,6 +61,18 @@ initCard = function(){
 }
 
 toggleCard = function(pair, card){
+    if (!timerStarted){
+        timerStarted = true;
+        timer = setInterval(()=>{
+            let ms = document.getElementById("time").textContent.split(".");
+            if (parseInt(ms[1]) >= 59){
+                document.getElementById("time").textContent = addZero(parseInt(ms[0])+1)+".00";
+            }
+            else{
+                document.getElementById("time").textContent = ms[0]+"."+addZero(parseInt(ms[1])+1);
+            }
+        }, 1000);
+    }
     if (document.getElementsByClassName(card)[0].style.transform == ""){
         document.getElementsByClassName(card)[0].style.transform = "scaleX(1)";
     }
@@ -87,6 +105,9 @@ toggleCard = function(pair, card){
                 let wrongCard2 = document.getElementsByClassName(card)[0];
                 if (activeS == pair) {
                     //success
+                    correct++;
+                    document.getElementById("score").textContent = correct.toString()+"/"+total.toString();
+
                     wrongCard1.style.animationName = "greenBlink";
                     wrongCard2.style.animationName = "greenBlink";
                     wrongCard1.style.animationDuration = "1s";
@@ -103,6 +124,7 @@ toggleCard = function(pair, card){
 
                     left--;
                     if (left == 0){
+                        clearInterval(timer);
                         setTimeout(function(){
                             document.getElementsByClassName("congrat")[0].style.display = "block";
                         }, 750);
@@ -110,6 +132,9 @@ toggleCard = function(pair, card){
                 }
                 else{
                     //fail
+                    wrong++;
+                    document.getElementById("wrong").textContent = wrong.toString();
+
                     wrongCard1.style.animationName = "";
                     wrongCard2.style.animationName = "";
                     setTimeout(function() {
@@ -169,4 +194,13 @@ loadCookie = function(){
         dir["card"+(2 * i + 1)] = 1;
     }
     return cookies.length;
+}
+
+addZero = function(no){
+    if (no <= 9){
+        return "0"+no.toString();
+    }
+    else{
+        return no.toString();
+    }
 }
