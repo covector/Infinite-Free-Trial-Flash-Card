@@ -19,6 +19,9 @@ window.onload = function(){
         initCard();  
     }
     else{
+        document.getElementsByClassName("correct")[0].style.display = "none";
+        document.getElementsByClassName("wrong")[0].style.display = "none";
+        document.getElementsByClassName("timer")[0].style.display = "none";
         document.getElementsByClassName("noCards")[0].style.display = "block";
     }
 }
@@ -27,6 +30,7 @@ initCard = function(){
     let cardAmount = loadCookie();
     left = cardAmount;
     total = cardAmount;
+    document.getElementById("score").textContent = "0/"+cardAmount.toString();
     let picked = [];
     let before = document.getElementById("endOfTable");
     let pickedAmount = 0;
