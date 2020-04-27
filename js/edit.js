@@ -51,7 +51,7 @@ dataValidation = function(){
     let description = document.getElementById("description");
     if (keyWord.value == "" | description.value == "") { return false; }
     if (hasCookie(keyWord.value)) { return false; }
-    if (keyWord.value.includes("=") | keyWord.value.includes(";") | description.value.includes("=") | description.value.includes(";")) { return false; }
+    if (keyWord.value.includes("=") | keyWord.value.includes(";") | description.value.includes(";")) { return false; }
     return true;
 }
 
@@ -59,9 +59,10 @@ displayCookie = function(){
     let cookies = document.cookie.split("; ")
     if (cookies[0].length != 0){
         for (let i = 0; i < cookies.length; i++){
-            let pair = cookies[i].split("=");
-            let word = pair[0];
-            let desc = pair[1];  
+            let pair = cookies[i];
+            let equalIndex = pair.indexOf("=");       
+            let word = pair.substring(0, equalIndex);
+            let desc = pair.substring(equalIndex + 1);
             let before = document.getElementsByClassName("cardAdding")[0];
 
             let divContain = document.createElement("DIV");
@@ -98,9 +99,10 @@ removeCookie = function(word){
 }
 
 hasCookie = function(word){
-    let cookies = document.cookie.split("; ")
+    let cookies = document.cookie.split("; ");
     for (let i = 0; i < cookies.length; i++){
-        if (cookies[i].split("=")[0] == word){
+        let equalIndex = cookies[i].indexOf("=");
+        if (cookies[i].substring(0, equalIndex) == word){
             return true;
         }
     }

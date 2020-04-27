@@ -161,9 +161,10 @@ toggleCard = function(pair, card){
 loadCookie = function(){
     let cookies = document.cookie.split("; ")
     for (let i = 0; i < cookies.length; i++){
-        let pair = cookies[i].split("=");
-        allCards["card"+(2 * i).toString()] = pair[0];
-        allCards["card"+(2 * i + 1).toString()] = pair[1];
+        let pair = cookies[i];
+        let equalIndex = pair.indexOf("=");
+        allCards["card"+(2 * i).toString()] = pair.substring(0, equalIndex);
+        allCards["card"+(2 * i + 1).toString()] = pair.substring(equalIndex + 1);
         dir["card"+(2 * i)] = 1;
         dir["card"+(2 * i + 1)] = 1;
     }

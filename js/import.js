@@ -6,22 +6,25 @@ importCookie = function(replace){
         if (replace){
             let decision = confirm("Are you sure you want to replace all existing cards? They will be gone forever.");
             if (decision){
-                let cookies = document.cookie.split("; ")
+                let cookies = document.cookie.split("; ");
                 for (let i = 0; i < cookies.length; i++){
-                    document.cookie = cookies[i].split("=")[0]+"=Delete; expires=11 Sep 2001 13:46:00 UTC";
+                    let equalIndex = cookies[i].indexOf("=");
+                    document.cookie = cookies[i].substring(0, equalIndex)+"=Delete; expires=11 Sep 2001 13:46:00 UTC";
                 }
                 let cookieOne = cookiesAdd.split(";")
                 for (let i = 0; i < cookieOne.length; i++){
-                    let cookieHalf = cookieOne[i].split("=");
-                    document.cookie = cookieHalf[0]+"="+cookieHalf[1]+"; expires=01 Jan 2120 00:00:00 UTC";
+                    let cookieHalf = cookieOne[i];
+                    let equalIndex = cookieHalf.indexOf("=");
+                    document.cookie = cookieHalf.substring(0, equalIndex)+"="+cookieHalf.substring(equalIndex + 1)+"; expires=01 Jan 2120 00:00:00 UTC";
                 }
             }
         }
         else{
             let cookieOne = cookiesAdd.split(";")
             for (let i = 0; i < cookieOne.length; i++){
-                let cookieHalf = cookieOne[i].split("=");
-                document.cookie = cookieHalf[0]+"="+cookieHalf[1]+"; expires=01 Jan 2120 00:00:00 UTC";
+                let cookieHalf = cookieOne[i];
+                let equalIndex = cookieHalf.indexOf("=");
+                document.cookie = cookieHalf.substring(0, equalIndex)+"="+cookieHalf.substring(equalIndex + 1)+"; expires=01 Jan 2120 00:00:00 UTC";
             }
         }  
         alert("Cards have been imported. You can now start a quiz.")
@@ -40,7 +43,8 @@ clearCookie = function(){
     if (decision){
             let cookies = document.cookie.split("; ")
         for (let i = 0; i < cookies.length; i++){
-            document.cookie = cookies[i].split("=")[0]+"=Delete; expires=11 Sep 2001 13:46:00 UTC";
+            let equalIndex = cookies[i].indexOf("=");
+            document.cookie = cookies[i].substring(0, equalIndex)+"=Delete; expires=11 Sep 2001 13:46:00 UTC";
         }
     }
 }
