@@ -4,7 +4,7 @@ importCookie = function(replace){
     let cookiesAdd = document.getElementById("importBar").value;
     if (cookiesAdd != ""){
         if (replace){
-            let decision = confirm("Are you sure you want to replace all existing cards? They will be gone forever.");
+            let decision = confirm("Are you sure you want to replace all existing cards? If you want to keep existing cards, consider using Import and Append instead.");
             if (decision){
                 let cookies = document.cookie.split("; ");
                 for (let i = 0; i < cookies.length; i++){
@@ -17,6 +17,7 @@ importCookie = function(replace){
                     let equalIndex = cookieHalf.indexOf("=");
                     document.cookie = cookieHalf.substring(0, equalIndex)+"="+cookieHalf.substring(equalIndex + 1)+"; expires=01 Jan 2120 00:00:00 UTC";
                 }
+                alert("Cards have been imported. You can now start a quiz.")
             }
         }
         else{
@@ -26,8 +27,9 @@ importCookie = function(replace){
                 let equalIndex = cookieHalf.indexOf("=");
                 document.cookie = cookieHalf.substring(0, equalIndex)+"="+cookieHalf.substring(equalIndex + 1)+"; expires=01 Jan 2120 00:00:00 UTC";
             }
+            alert("Cards have been imported. You can now start a quiz.")
         }  
-        alert("Cards have been imported. You can now start a quiz.")
+        
     }
 }
 
@@ -39,7 +41,7 @@ exportCookie = function(){
 }
 
 clearCookie = function(){
-    let decision = confirm("Are you sure you want to clear? You will have to re-enter all cards if you do so.");
+    let decision = confirm("Are you sure you want to clear all cards? You will have to re-enter all cards if you do so.");
     if (decision){
             let cookies = document.cookie.split("; ")
         for (let i = 0; i < cookies.length; i++){
