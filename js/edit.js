@@ -26,7 +26,7 @@ addWord = function(){
         wordContain.classList.add("word");
 
         let descContain = document.createElement("DIV");
-        descContain.textContent = description.value;
+        descContain.textContent = description.value.replace(/\n/g, " ");
         descContain.classList.add("description");
 
         let buttonContain = document.createElement("DIV");
@@ -39,7 +39,7 @@ addWord = function(){
         divContain.appendChild(buttonContain);
         document.getElementsByClassName("list")[0].insertBefore(divContain, before)
 
-        addCookie(keyWord.value, description.value);
+        addCookie(keyWord.value, description.value.replace(/\n/g, " "));
 
         keyWord.value = "";
         description.value = "";
